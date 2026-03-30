@@ -1,0 +1,30 @@
+class Student:
+    markSheet = ["naman : 99","komal : 90","sahil : 86","lakshay : 80","tohid : 88"]
+    def writing(self):
+        with open("marks.txt","w") as f:
+            f.write("naman 99")
+            f.write("\nkomal 95")
+            f.write("\nsahil 90")
+            f.write("\nlakshay 85")
+            f.write("\ntohid 80")
+
+    def grade(self):
+        with open("marks.txt","r") as f:
+            for lines in f:
+                parts = lines.split()
+                name = parts[0]
+                marks = int(parts[1])
+                if marks >= 90:
+                    print(f"{name} : Grade A")  # return nahi, print!
+                elif marks >= 70:
+                    print(f"{name} : Grade B")
+                elif marks >= 50:
+                    print(f"{name} : Grade C")
+                elif marks >= 33:
+                    print(f"{name} : Grade D")
+                else:
+                    print(f"{name} : kaam ka naa kaaj ka!")
+            
+b1 = Student()
+b1.writing()
+print(b1.grade())
