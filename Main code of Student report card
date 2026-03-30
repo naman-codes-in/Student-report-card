@@ -23,7 +23,7 @@ class Student:
                 elif marks >= 33:
                     print(f"{name} : Grade D")
                 else:
-                    print(f"{name} : kaam ka naa kaaj ka!")
+                    print(f"{name} : You Failed!!")
             
 b1 = Student()
 b1.writing()
