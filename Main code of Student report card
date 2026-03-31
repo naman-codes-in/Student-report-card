@@ -1,5 +1,5 @@
 class Student:
-    markSheet = ["naman : 99","komal : 90","sahil : 86","lakshay : 80","tohid : 88"]
+    markSheet = ["naman : 99","komal : 95","sahil : 90","lakshay : 85","tohid : 80"]
     def writing(self):
         with open("marks.txt","w") as f:
             f.write("naman 99")
@@ -15,7 +15,7 @@ class Student:
                 name = parts[0]
                 marks = int(parts[1])
                 if marks >= 90:
-                    print(f"{name} : Grade A")  # return nahi, print!
+                    print(f"{name} : Grade A")
                 elif marks >= 70:
                     print(f"{name} : Grade B")
                 elif marks >= 50:
